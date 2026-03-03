@@ -1,0 +1,1 @@
+"""GestureDrop — core package."""

@@ -1,0 +1,46 @@
+# =============================================================================
+# GestureDrop — .gitignore
+# =============================================================================
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# Test cache
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs (regenerated at runtime)
+logs/
+
+# Runtime data (created by the app)
+received_files/
+temp/
+
+# Device identity (unique per machine — must NOT be shared)
+gesturedrop/device_identity.json
+
+# Environment files
+.env
+.env.local
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+# Tools (local-only test scripts)
+tools/

@@ -1,0 +1,21 @@
+# =============================================================================
+# GestureDrop — Development / Test Requirements
+# =============================================================================
+# Install with:
+#   pip install -r requirements-dev.txt
+#
+# This installs everything in requirements.txt PLUS the test toolchain.
+# =============================================================================
+
+# Include all runtime dependencies
+-r requirements.txt
+
+# -----------------------------------------------------------------------------
+# [Testing]
+# -----------------------------------------------------------------------------
+
+# Test runner
+pytest>=7.4.0
+
+# Per-test timeout guard (prevents hung integration tests)
+pytest-timeout>=2.2.0

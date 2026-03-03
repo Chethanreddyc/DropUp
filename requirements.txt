@@ -1,0 +1,49 @@
+# =============================================================================
+# GestureDrop — Runtime Requirements
+# =============================================================================
+# Install all core + gesture deps:
+#   pip install -r requirements.txt
+#
+# Install without camera (headless / one-shot modes only):
+#   pip install -r requirements.txt --ignore-requires-python
+#   then skip the [Gesture / camera] block manually.
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# [Core] — always required
+# -----------------------------------------------------------------------------
+
+# Clipboard access (text + file paths)
+pyperclip>=1.8.2
+
+# Image handling (clipboard images → PNG, screenshot capture)
+Pillow>=10.0.0
+
+# Screen capture (screenshot fallback when clipboard has no file/image/text)
+mss>=9.0.1
+
+
+# -----------------------------------------------------------------------------
+# [Gesture / Camera] — required for default camera mode
+#   Skip these if you only use --headless / --send / --receive
+# -----------------------------------------------------------------------------
+
+# OpenCV — frame capture, flip, display, HUD drawing
+opencv-python>=4.8.0
+
+# MediaPipe — hand landmark detection → gesture classification
+# Pinned: 0.10.14+ removes mp.solutions.hands (legacy API used by gesture.py)
+mediapipe==0.10.8
+
+
+# -----------------------------------------------------------------------------
+# [Toast notifications] — optional, improves UX on Windows
+#   ToastService falls back to console print if neither is installed.
+# -----------------------------------------------------------------------------
+
+# Cross-platform notifications (Windows / macOS / Linux)
+plyer>=2.1.0
+
+# Richer Windows 10/11 toast notifications (used when plyer is unavailable)
+# win10toast>=0.9         # uncomment if you prefer win10toast over plyer
